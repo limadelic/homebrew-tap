@@ -4,25 +4,17 @@ class El < Formula
   license "MIT"
   version "0.1.9"
 
-  on_macos do
-    on_arm do
-      url "https://github.com/limadelic/el/releases/download/v0.1.9/el_macos_arm64"
-      sha256 "27a06bc0c25be3355a35bf030bc87cb40398f85be18c01e35900d1ef17f572b0"
-    end
-    on_intel do
-      url "https://github.com/limadelic/el/releases/download/v0.1.9/el_macos_x86_64"
-      sha256 "2d440f90c3880d25d22482b00bd4c62a5a8cf9028a11f9b30d09c27f39a7356c"
-    end
-  end
+  url "https://github.com/limadelic/el/releases/download/v0.1.9-escript/el"
+  sha256 "5bf5ef1f854d080e0aa9a834095a311bc16e35219ef080c2feb3c87f20124cca"
+
+  depends_on "erlang"
 
   def install
-    binary = Hardware::CPU.arm? ? "el_macos_arm64" : "el_macos_x86_64"
-    bin.install binary => "el"
+    bin.install "el"
   end
 
   test do
-    output = shell_output("#{bin}/el ls")
-    assert_match "Session", output
+    assert_match "usage", shell_output("#{bin}/el", 0)
   end
 
   livecheck do
