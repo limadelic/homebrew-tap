@@ -16,7 +16,7 @@ class El < Formula
 
   def install
     binary = Hardware::CPU.arm? ? "el_macos_arm64" : "el_macos_x86_64"
-    bin.install binary, as: "el"
+    bin.install binary => "el"
   end
 
   test do
