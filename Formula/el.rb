@@ -2,16 +2,16 @@ class El < Formula
   desc "CLI for managing headless Claude Code sessions"
   homepage "https://github.com/limadelic/el"
   license "MIT"
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
     on_arm do
-      url "https://github.com/limadelic/el/releases/download/v0.1.1/el_macos_arm64"
-      sha256 "dab50a8904fdc575eee46282590d73e057bfc6c42982d9e2b44e8c9afc145038"
+      url "https://github.com/limadelic/el/releases/download/v0.1.2/el_macos_arm64"
+      sha256 "c9fb8e177dc66365fd4ea75c4fe9f897fbe7f7cf9721077f8bdf3a122a8f3d13"
     end
     on_intel do
-      url "https://github.com/limadelic/el/releases/download/v0.1.1/el_macos_x86_64"
-      sha256 "9c20a86cae985d3096ea86cb508a0f6626506f9ab33e07451848111bb7459232"
+      url "https://github.com/limadelic/el/releases/download/v0.1.2/el_macos_x86_64"
+      sha256 "05e9ea58646e5cb4920a9616cb7d91ae29a3ed50b43efac0a1d4d36b024838e0"
     end
   end
 
