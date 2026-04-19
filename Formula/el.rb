@@ -2,7 +2,7 @@ class El < Formula
   desc "CLI for managing headless Claude Code sessions"
   homepage "https://github.com/limadelic/el"
   url "https://github.com/limadelic/el/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "2e65eff7a145dda7ee51d1741299f848e5bf752e6755c1d7aee4f37953fb0519"
+  sha256 "540ddb6176e2e2de8660335ca1c79e776dee2b59cebc2f1cc4a3720853ffe614"
   license "MIT"
 
   depends_on "erlang" => :runtime
