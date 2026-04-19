@@ -1,20 +1,22 @@
 class El < Formula
   desc "CLI for managing headless Claude Code sessions"
   homepage "https://github.com/limadelic/el"
-  url "https://github.com/limadelic/el/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "540ddb6176e2e2de8660335ca1c79e776dee2b59cebc2f1cc4a3720853ffe614"
   license "MIT"
 
-  depends_on "erlang" => :runtime
-  depends_on "elixir" => :build
+  on_macos do
+    on_arm do
+      url "https://github.com/limadelic/el/releases/download/v0.1.0/el_macos_arm64"
+      sha256 "TODO_ARM64_SHA256"
+    end
+    on_intel do
+      url "https://github.com/limadelic/el/releases/download/v0.1.0/el_macos_x86_64"
+      sha256 "TODO_X86_64_SHA256"
+    end
+  end
 
   def install
-    ENV["MIX_ENV"] = "prod"
-    system "mix", "local.hex", "--force"
-    system "mix", "local.rebar", "--force"
-    system "mix", "deps.get"
-    system "mix", "escript.build"
-    bin.install "el"
+    binary = Hardware::CPU.arm? ? "el_macos_arm64" : "el_macos_x86_64"
+    bin.install binary, as: "el"
   end
 
   test do
