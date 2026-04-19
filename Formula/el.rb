@@ -2,6 +2,7 @@ class El < Formula
   desc "CLI for managing headless Claude Code sessions"
   homepage "https://github.com/limadelic/el"
   license "MIT"
+  version "0.1.0"
 
   on_macos do
     on_arm do
