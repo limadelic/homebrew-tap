@@ -2,10 +2,10 @@ class El < Formula
   desc "CLI for managing headless Claude Code sessions"
   homepage "https://github.com/limadelic/el"
   license "MIT"
-  version "0.1.16"
+  version "0.1.17"
 
-  url "https://github.com/limadelic/el/releases/download/v0.1.16/el_macos_arm64"
-  sha256 "5af24e2dd922a3907ce8f2cfaa5f2712700a3db0b097cb297bca9317743ef008"
+  url "https://github.com/limadelic/el/releases/download/v0.1.17/el_macos_arm64"
+  sha256 "78c7aad6f0befe6edbad2bf656c92c476240b2cd8ab338a24aac6f15828d9e84"
 
   def install
     bin.install "el_macos_arm64" => "el"
