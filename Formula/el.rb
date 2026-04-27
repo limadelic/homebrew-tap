@@ -2,10 +2,10 @@ class El < Formula
   desc "CLI for managing headless Claude Code sessions"
   homepage "https://github.com/limadelic/el"
   license "MIT"
-  version "0.1.86"
+  version "0.1.88"
 
-  url "https://github.com/limadelic/el/releases/download/v0.1.86/el-0.1.86.tar.gz"
-  sha256 "6ac004b1dcfde832b795fa9ed1e2ef9b26511bec9216c3d9d7da3b091d7a2c2d"
+  url "https://github.com/limadelic/el/releases/download/v0.1.88/el-0.1.88.tar.gz"
+  sha256 "5ade8937f5f9e52e330bb499ce534ad6f7b3921619c5e6eb9ffb799372e7a119"
 
   def install
     libexec.install Dir["*"]
