@@ -1,14 +1,14 @@
 class Elita < Formula
   desc "Agentic platform with el CLI"
   homepage "https://github.com/limadelic/elita"
-  url "https://github.com/limadelic/elita/archive/refs/tags/v0.0.3.tar.gz"
-  sha256 "48ee9bf9bcdac2440e010ad1cde5625b6162e48815ac47d900a25ac9b90ca43c"
+  url "https://github.com/limadelic/elita/archive/refs/tags/v0.0.4.tar.gz"
+  sha256 "0352e7462ecf23edce9346ca547e4dd43ca25e9d29bd458cc5197981dfd684b2"
   license "MIT"
 
   depends_on "elixir"
 
   def install
-    build
+    compile
     libexec.install "apps/el/el"
     pkgshare.install "apps/elita/agents"
     bin.install "ops/brew/el-node"
@@ -29,7 +29,7 @@ class Elita < Formula
 
   private
 
-  def build
+  def compile
     ENV["MIX_ENV"] = "prod"
     ENV["MIX_HOME"] = buildpath / ".mix"
     ENV["HEX_HOME"] = buildpath / ".hex"
