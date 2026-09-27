@@ -1,8 +1,8 @@
 class Elita < Formula
   desc "Agentic platform with el CLI"
   homepage "https://github.com/limadelic/elita"
-  url "https://github.com/limadelic/elita/archive/refs/tags/v0.0.4.tar.gz"
-  sha256 "0352e7462ecf23edce9346ca547e4dd43ca25e9d29bd458cc5197981dfd684b2"
+  url "https://github.com/limadelic/elita/archive/refs/tags/v0.0.5.tar.gz"
+  sha256 "b60921253a279b0ebc3e1cb25680a04fee476ac9fdb660a538d79fabe43a535f"
   license "MIT"
 
   depends_on "elixir"
